@@ -4,7 +4,7 @@ public class LinkedList {
 	
 	protected Node head;
 	protected long size;
-	protected String deneme; // push denemesi icin yazildi
+	
 	
 	public LinkedList(Node head, long size){
 		this.head=head;
