@@ -3,13 +3,12 @@ package Algo_HW1;
 public class Node {
 	protected Object data;
 	protected Node next;
-	protected long size;
-	
-	public Node(int data,long size) {
+	protected Node prev;
+
+	public Node(int data,Node next, Node prev) {
 		this.data=data;
 		this.next =null;
-		this.size=0;
-		
+		this.prev=prev;
 	}
 
 	public Object getData() {
@@ -27,5 +26,10 @@ public class Node {
 	public void setNext(Node next) {
 		this.next = next;
 	}
-	
+	public Node getPrev(){
+		return prev;
+	}
+	public void setPrev(Node prev){
+		this.prev=prev;
+	}
 }

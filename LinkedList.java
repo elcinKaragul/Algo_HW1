@@ -3,34 +3,42 @@ package Algo_HW1;
 public class LinkedList {
 	
 	protected Node head;
+	protected long size;
 	
+	public LinkedList(Node head, long size){
+		this.head=head;
+		this.size=size;
+	}
+	public Node gethead(){
+		return head;
+	}
+	public long getsize(){
+		return size;
+	}
+	public void sethead(Node head){
+		this.head=head;
+	}
+	public void setsize(long size){
+		this.size=size;
+	}
+
+	public void findEven(Node current){
+
+		for(int i=0; i<size;i++){
+			
+		}
+	}
+
+
 	public void insert(int val) {
-        // create new node
+       
+		// create new node
         // if head is null, head = newNode
         // else traverse to end and add there
-		Node newNode = new Node();
-		
-       
-			
-			if(head==null) {
-			newNode= head.next;
-			head= newNode;
-			
-			
-			
-		}else {
-			Node current = head;
-	        while (current.getNext() != null) {
-	        	
-	        }
 			
 			
 	}
 		
-		
-		
-    
-
     public void printList() {
         // traverse from head and print each node's data
     }
@@ -40,4 +48,4 @@ public class LinkedList {
     }
 }
 
-}
+
