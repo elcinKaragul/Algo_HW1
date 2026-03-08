@@ -12,7 +12,7 @@ public class Stack {
     }
     public void push(int val){
         //  new node with that holds val
-        Node newNode = new Node(val, null, null);       
+        Node newNode = new Node(val, null);       
         // if top is null top should be newNode
         if(top == null){
             top = newNode;
@@ -22,16 +22,14 @@ public class Stack {
             top = newNode;
         }   
     }
-    public void pop(){
+    public int pop(){
         // if top is null, return
         if(top == null){
-            return;
-        } else {
-            top = top.getNext();
-            if(top != null){
-                top.setPrev(null);
-            }
-        }
+            return -1;
+        } 
+        in val=(Integer) top.getData();
+        top=top.getNext();
+        return val;
 
 
         // else top = top.next
