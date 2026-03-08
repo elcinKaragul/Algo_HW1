@@ -34,9 +34,7 @@ public class LinkedList {
        
 		// create new node
         // if head is null, head = newNode
-        // else traverse to end and add there
-			
-			
+        // else traverse to end and add there	
 	}
 		
     public void printList() {
