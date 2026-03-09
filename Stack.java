@@ -1,5 +1,7 @@
 public class Stack {
     Node top;
+
+
     public Stack(Node top){
         this.top=top;
     }
@@ -25,17 +27,14 @@ public class Stack {
     public int pop(){
         // if top is null, return
         if(top == null){
-            return -1;
+            return -1; //sentinel value, to show that there is an error while the stack is empty
         } 
-        in val=(Integer) top.getData();
+        int val=(Integer) top.getData();
         top=top.getNext();
         return val;
 
 
         // else top = top.next
-
-
-
     }
     public void printStack(){
         // traverse from top and print each node's data
