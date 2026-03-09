@@ -12,7 +12,8 @@ public class Stack {
     public void setTop(Node top){
         this.top=top;
     }
-    public void push(int val){
+
+    public void push(Object val){
         //  new node with that holds val
         Node newNode = new Node(val, null);       
         // if top is null top should be newNode
@@ -20,7 +21,6 @@ public class Stack {
             top = newNode;
         }  else {// newNode.next is top then top is newNode
             newNode.setNext(top);
-            top.setPrev(newNode);
             top = newNode;
         }   
     }

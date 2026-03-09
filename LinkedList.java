@@ -1,5 +1,7 @@
 package Algo_HW1;
 
+import Algo_HW1.Node;
+
 public class LinkedList {
 	
 	protected Node head;
@@ -23,10 +25,17 @@ public class LinkedList {
 		this.size=size;
 	}
 
-	public void findEven(Node current){
+	public void reverseEvenSubparts(Node current){
+		int num = (Integer) current.data;
+		Stack stack= new Stack(null);
 
 		for(int i=0; i<size;i++){
+			if(num %2==0){
 			
+				
+			} else{
+
+			}
 		}
 	}
 
@@ -40,10 +49,6 @@ public class LinkedList {
 		
     public void printList() {
         // traverse from head and print each node's data
-    }
-
-    public void reverseEvenSubparts() {
-        //  add this after insert and print work
     }
 }
 
