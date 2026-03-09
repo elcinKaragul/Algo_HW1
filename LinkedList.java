@@ -5,6 +5,7 @@ public class LinkedList {
 	protected Node head;
 	protected long size;
 	
+	
 	public LinkedList(Node head, long size){
 		this.head=head;
 		this.size=size;
