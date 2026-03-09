@@ -25,17 +25,10 @@ public class LinkedList {
 		this.size=size;
 	}
 
-	public void reverseEvenSubparts(Node current){
-		int num = (Integer) current.data;
-		Stack stack= new Stack(null);
+	public void findEven(Node current){
 
 		for(int i=0; i<size;i++){
-			if(num %2==0){
 			
-				
-			} else{
-
-			}
 		}
 	}
 
