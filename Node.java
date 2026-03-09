@@ -7,6 +7,10 @@ public class Node {
 	public Node(Object data,Node next) {
 		this.data=data;
 		this.next =null;
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 452d5c3 (spdvjojv)
 	}
 
 	public Object getData() {
