@@ -30,6 +30,7 @@ public class LinkedList {
 		Stack stack= new Stack(null);
 
 		for(int i=0; i<size;i++){
+						
 			if(num %2==0){
 			
 				
