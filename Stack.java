@@ -2,58 +2,47 @@ package Algo_HW1;
 
 public class Stack {
     Node top;
+    int size;
 
-
-    public Stack(Node top){
-        this.top=top;
-    }
-    public Node getTop(){
-        return top;     
-    
-    }
-    public void setTop(Node top){
-        this.top=top;
+    public Stack(Node top) {
+        this.top = top;
+        size = 0;
     }
 
+    public Node getTop() {
+        return top;
+    }
 
+    public void setTop(Node top) {
+        this.top = top;
+    }
 
-    public void push(Object data){
-        //  new node with that holds val
+    public void push(Object data) {
         Node newNode = new Node(data);
-        // if top is null top should be newNode
-        if(top == null){
+        if (top == null) {
             top = newNode;
-        }  else {// newNode.next is top then top is newNode
-
+        } else {
             newNode.setNext(top);
             top = newNode;
-
-            Node temp= top;
-            top.next = newNode; //once topun ustune yeni node ekle
-            top = newNode; //sonra yeni topun yeni eklenen oldugunu belirt
-            
-            
-
-        }   
+        }
+        size++;
     }
-    public int pop(){
-        // if top is null, return
-        if(top == null){
-            return -1; //sentinel value, to show that there is an error while the stack is empty
-        } 
-        int val=(Integer) top.getData();
-        top=top.getNext();
+
+    public Object pop() {          // Object instead of int
+        if (top == null) {
+            return null;           // null instead of -1
+        }
+        Object val = top.getData();
+        top = top.getNext();
+        size--;
         return val;
-
-        
-
-
-        // else top = top.next
     }
-    public void printStack(){
-        // traverse from top and print each node's data
+
+    public void printStack() {
         Node current = top;
-        while(current != null) {
+        while (current != null) {
             System.out.print(current.getData() + " ");
             current = current.getNext();
-        }}}
+        }
+    }
+}
