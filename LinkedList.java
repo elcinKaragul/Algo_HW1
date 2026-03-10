@@ -26,14 +26,26 @@ public class LinkedList {
 	}
 
 	public void findEven(Node current) {
-	Node selection = head;
-		for (int i = 0; i < size; i++) {
-			if ((Integer)selection.data % 2 == 0) {
+		Node selection = head; //
+		while ((Integer) selection.data !=null){
 
-			}
-		selection = selection.getNext();
-		}
+				if ((Integer) selection.data % 2 == 0) {  //casting yapip evenligi kontrol ettik
+					Stack stack = new Stack(null); //stack actik
+					Node evenStart = selection;
+					//stack.push(selection.data); // puhed even node
+					while ((Integer) selection.data != null&&(Integer) selection.data % 2 == 0) { //checks if other nodes are even or not if even ads in stack
+						stack.push(selection);
+						selection = selection.getNext();
+
+					}
+
+
+				}
+				selection = selection.getNext();
+
 	}
+	}
+
 
 	public void insert(int val) {
        

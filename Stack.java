@@ -17,9 +17,9 @@ public class Stack {
 
 
 
-    public void push(Object data, Node next){
+    public void push(Object data){
         //  new node with that holds val
-        Node newNode = new Node(data, null);       
+        Node newNode = new Node(data);
         // if top is null top should be newNode
         if(top == null){
             top = newNode;
