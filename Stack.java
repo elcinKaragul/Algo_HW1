@@ -1,3 +1,5 @@
+package Algo_HW1;
+
 public class Stack {
     Node top;
 
@@ -8,32 +10,30 @@ public class Stack {
     public Node getTop(){
         return top;     
     
-}   
+    }
     public void setTop(Node top){
         this.top=top;
     }
-<<<<<<< HEAD
 
-    public void push(Object val){
-=======
+
+
     public void push(Object data, Node next){
->>>>>>> 452d5c3 (spdvjojv)
         //  new node with that holds val
         Node newNode = new Node(data, null);       
         // if top is null top should be newNode
         if(top == null){
             top = newNode;
         }  else {// newNode.next is top then top is newNode
-<<<<<<< HEAD
+
             newNode.setNext(top);
             top = newNode;
-=======
+
             Node temp= top;
             top.next = newNode; //once topun ustune yeni node ekle
             top = newNode; //sonra yeni topun yeni eklenen oldugunu belirt
             
             
->>>>>>> 452d5c3 (spdvjojv)
+
         }   
     }
     public int pop(){
@@ -53,8 +53,7 @@ public class Stack {
     public void printStack(){
         // traverse from top and print each node's data
         Node current = top;
-        while(current != null){
+        while(current != null) {
             System.out.print(current.getData() + " ");
-            current = current.getNext();        
-    }
-}
+            current = current.getNext();
+        }}}

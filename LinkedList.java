@@ -25,14 +25,15 @@ public class LinkedList {
 		this.size=size;
 	}
 
-	public void findEven(Node current){
+	public void findEven(Node current) {
+	Node selection = head;
+		for (int i = 0; i < size; i++) {
+			if ((Integer)selection.data % 2 == 0) {
 
-		for(int i=0; i<size;i++){
-			if(num %2==0){
-			
+			}
+		selection = selection.getNext();
 		}
 	}
-
 
 	public void insert(int val) {
        
