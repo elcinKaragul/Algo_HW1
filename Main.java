@@ -17,7 +17,7 @@ public class Main {
 
 
 
-		list.findEven(list.gethead());
+		list.findEven();
 
 		list.printList();
 

@@ -18,7 +18,7 @@ public class Stack {
     }
 
     public void push(Object data) {
-        Node newNode = new Node(data);
+        Node newNode = new Node(data,null);
         if (top == null) {
             top = newNode;
         } else {

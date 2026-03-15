@@ -15,7 +15,7 @@ public class LinkedList {
 	public void sethead(Node head) { this.head = head; }
 	public void setsize(long size) { this.size = size; }
 
-	public void findEven(Node current) {
+	public void findEven() {
 		Node selection = head;
 		Node prev = null;
 
@@ -59,7 +59,7 @@ public class LinkedList {
 	}
 
 	public void insert(int val) {
-		Node newNode = new Node(val);
+		Node newNode = new Node(val,null);
 		if (head == null) {
 			head = newNode;
 		} else {

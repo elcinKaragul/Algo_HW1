@@ -4,7 +4,7 @@ public class Node {
 	protected Object data;
 	protected Node next;
 
-	public Node(Object data) {
+	public Node(Object data,Node next) {
 		this.data=data;
 		this.next =null;
 
