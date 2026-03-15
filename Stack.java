@@ -1,23 +1,47 @@
 package Algo_HW1;
-
+//
+// Title: Stack class
+// Author: Kayra Arı-ELçin Karagül
+// ID: 10001507-10885319050
+// Section: 4
+// Assignment: Hw1-Q1
+// Description: This class implements a stack using linked nodes.
+//              It is used by the LinkedList class to reverse even-valued
+//              segments by pushing and popping nodes in LIFO order.
+//
 public class Stack {
     Node top; //top node of stack
     int size; //number of elements in stack
-//constructer
+    //
+    // Summary: Constructor that initializes the stack with a given top node.
+    // Precondition: top is a Node object or null
+    // Postcondition: stack is initialized with size 0
+    //
     public Stack(Node top) {
         this.top = top;
         size = 0;
     }
-//get-set
+    //
+    // Summary: Returns the top node of the stack
+    // Precondition: none
+    // Postcondition: top node is returned without modifying the stack
+    //
     public Node getTop() {
         return top;
     }
-
+    //
+    // Summary: Sets the top node of the stack
+    // Precondition: top is a valid Node or null
+    // Postcondition: top is updated to the given node
+    //
     public void setTop(Node top) {
         this.top = top;
     }
-
-    //pushes a new value onto the top of the stack
+    //
+    // Summary: Pushes a new value onto the top of the stack.
+    // Precondition: data is a valid Object
+    // Postcondition: new node added to top, size incremented by 1
+    //
     public void push(Object data) {
         Node newNode = new Node(data,null);
         if (top == null) {
@@ -29,7 +53,13 @@ public class Stack {
         }
         size++;
     }
-    // removes and returns the top element, returns null if stack is empty
+    //
+    // Summary: Removes and returns the top element of the stack.
+    //          Returns null if the stack is empty.
+    // Precondition: none
+    // Postcondition: top element removed and returned, size decremented by 1.
+    //                returns null if stack was empty.
+    //
     public Object pop() {
         if (top == null) {
             return null;           // null instead of -1
@@ -39,7 +69,11 @@ public class Stack {
         size--;
         return val;
     }
-    // prints all elements from top to bottom
+    //
+    // Summary: Prints all elements in the stack from top to bottom.
+    // Precondition: none
+    // Postcondition: all elements printed, stack is unchanged
+    //
     public void printStack() {
         Node current = top;
         while (current != null) {
